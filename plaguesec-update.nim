@@ -2,6 +2,8 @@ import httpclient
 import osproc
 import strformat
 
+var request = newHttpClient()
+
 proc writeFile(content: string) = 
     let
         update_file = open("/tmp/plaguesec-update.sh", fmWrite)
