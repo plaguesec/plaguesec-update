@@ -4,7 +4,7 @@ import strformat
 
 proc writeFile(content: string) = 
     let
-        update_file = open("/tmp/plaguesec-update.sh", fmWarite)
+        update_file = open("/tmp/plaguesec-update.sh", fmWrite)
     update_file.write(fmt"""
 {content}
 
