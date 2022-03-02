@@ -10,10 +10,10 @@ update_kde(){
     sudo apt-get upgrade -y
 }
 
-if [ $XDG_CURRENT_DESKTOP == "XFCE" ]
+if [ $XDG_CURRENT_DESKTOP -eq "XFCE" ]
     then
         update_xfce
-elif [ $XDG_CURRENT_DESKTOP == "KDE" ]
+elif [ $XDG_CURRENT_DESKTOP -eq "KDE" ]
     then
         update_kde
 else
