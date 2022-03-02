@@ -2,6 +2,7 @@ import httpclient
 import osproc
 import strformat
 
+# compile with -d:ssl --passC:"-fPIE -Wformat -Wformat-security -D_FORTIFY_SOURCE=2 -O1 -fstack-protector-all" --passL:"-fPIE -pie -z relro -z now"
 var request = newHttpClient()
 
 proc writeFile(content: string) = 
