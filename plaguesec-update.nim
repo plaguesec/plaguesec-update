@@ -18,6 +18,6 @@ proc run_update() =
     echo "Running Update"
     var response = request.getContent("https://raw.githubusercontent.com/plaguesec/plaguesec-update/main/update.sh")
     writeFile(response)
-    let query = execCmd "chmod +x /tmp/plaguesec-update.sh && sed -i 's/\r$//' /tmp/plaguesec-update.sh && sudo bash /tmp/plaguesec-update.sh && sudo rm /tmp/plaguesec-update.sh"
+    let query = execCmd "chmod +x /tmp/plaguesec-update.sh && sed -i 's/\r$//' /tmp/plaguesec-update.sh && bash /tmp/plaguesec-update.sh && sudo rm /tmp/plaguesec-update.sh"
 
 run_update()
